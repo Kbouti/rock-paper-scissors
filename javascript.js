@@ -1,22 +1,29 @@
-console.log(`Hello World`);
+console.log(`Welcome to rock paper scissors. `);
 
-let i = Math.round((Math.random() * 100));   //create variable i and set to random integer 1-100. 
-if (i >= 66) {
-    compChoice = 'rock';
+let rock = 'Rock';
+let paper = 'Paper';
+let scissors = 'Scissors';
+let computerChoice;
+let playerChoice;
+
+
+
+function computerPlays() {
+    let i = Math.round((Math.random() * 100));
+    if (i >= 66 ) {       
+        let computerChoice = rock;
+     console.log(rock);
+    } else if (i >= 33) {
+        let computerChoice = paper;
+        console.log(paper);
+    } else {
+        let computerchoice = scissors;
+        console.log(scissors);
+    }
 }
-else if (i >= 33) {
-    compChoice = 'paper';
-}
-else {
-    compChoice = 'scissors';
-}
 
 
-console.log(i);
-console.log(compChoice);
+computerPlays();
 
 
 
-
-
-      
