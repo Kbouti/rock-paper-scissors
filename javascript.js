@@ -50,13 +50,14 @@ function playerPlays() {                                                        
 }
 
 
-computerPlays(), playerPlays();
+let computerTurn = computerPlays();
+let playerTurn = playerPlays();
 
 
-if (playerChoice === rock){
-    console.log('here we got a rock');
+
+if (computerTurn == playerTurn) {
+    console.log(`it's a tie!`)
 }
-
-if (computerChoice === rock){
-    console.log('computer got a rock');
+else {
+    console.log(`It wasn't a tie.`);
 }
