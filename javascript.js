@@ -32,14 +32,11 @@ function playerPlays(){
     console.log(`Player typed: ${input}`);
     input = input.toLowerCase();
     console.log(`Player's input to lower case is: ${input}`);
-    if (choices.includes(input)) {
+    while (choices.includes(input) == false){
+        input =prompt(`Try again and check your spelling`);
     }
-    else{
-        let input =prompt(`Check your spelling and try again.`)
-        
-    }
+    input = input.toLowerCase();
     return input;
-
 }
 
 
