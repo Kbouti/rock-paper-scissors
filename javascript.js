@@ -51,19 +51,27 @@ function playerPlays(){
 
 
 
-function compareChoice(){
+function getTurn(){                 //I'm having trouble defining the choices and comparing them under the same scope. Every time I try to evaluate a winner I get a reference error. I'm trying to create a "turn" value that I can use to trigger the different outcomes. 
     let turn = playRound();
     console.log(turn);
-    if ((turn == rock,rock) || (turn == scissors,scissors) || (turn == paper,paper)){
-        return `tie`
-    }
+   return turn;
 }
 
 
+function getResult(){
+    let turn = getTurn();
+    console.log(turn);
+    if ((turn == (rock, paper)) || (turn == (paper, scissors)) || (turn == (scissors, rock))) {
+        console.log(`you won!`)
+    }
+}
+
+// ^I'm not sure why this doesn't work. It's erroring on line 64; the if statement. 
 
 
-compareChoice();
 
+//getTurn();
+getResult();
 
 
 //make a function that checks if it's a tie-then replays the match if it is?
