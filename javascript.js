@@ -23,15 +23,15 @@ function playRound() {
     const playerChoice = playerPlays();
     console.log(`Player's choice: ${playerChoice}`);
 
-    if (computerChoice == playerChoice){
-        console.log(`it's a tie!`);
-    }
-   else {
-    console.log(`it isn't a tie`);
-   }
-   let result = (`${computerChoice}, ${playerChoice}`);
-   console.log(`The result returned by function playRound is: ` + result);
-   return result;
+  let winner = compareRound(computerChoice, playerChoice);
+  if (winner == `Tie`){
+    console.log(`It's a tie! Click refresh to try again`);
+  }
+  else if (winner ==`Player`) {
+    console.log(`Player wins!` );
+  }
+  else {console.log(`You lose..`);
+}
 }
 
 function computerPlays(){
@@ -49,29 +49,21 @@ function playerPlays(){
     return input;
 }
 
-
-
-function getTurn(){                 //I'm having trouble defining the choices and comparing them under the same scope. Every time I try to evaluate a winner I get a reference error. I'm trying to create a "turn" value that I can use to trigger the different outcomes. 
-    let turn = playRound();
-    console.log(turn);
-   return turn;
-}
-
-
-function getResult(){
-    let turn = getTurn();
-    console.log(turn);
-    if ((turn == (rock, paper)) || (turn == (paper, scissors)) || (turn == (scissors, rock))) {
-        console.log(`you won!`)
+function compareRound(choiceC, choiceP) {
+    if (choiceC == choiceP) {
+        return `Tie`;
+    }
+    else if (((choiceC == `rock`) && (choiceP == `paper`)) || ((choiceC == `paper`) && (choiceP == `scissors`)) || ((choiceC == `scissors`) && (choiceP == `rock`))){
+        return `Player`;
+    }
+    else{
+        return `Computer`;
     }
 }
 
-// ^I'm not sure why this doesn't work. It's erroring on line 64; the if statement. 
 
 
+game();
 
-//getTurn();
-getResult();
+//compareRound();
 
-
-//make a function that checks if it's a tie-then replays the match if it is?
