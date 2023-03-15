@@ -29,9 +29,12 @@ function playRound() {
   }
   else if (winner ==`Player`) {
     console.log(`Player wins!` );
+    playerScore = playerScore + 1;
   }
   else {console.log(`You lose..`);
+    computerScore = computerScore +1;
 }
+    declareScore(computerScore, playerScore);
 }
 
 function computerPlays(){
@@ -61,7 +64,20 @@ function compareRound(choiceC, choiceP) {
     }
 }
 
-
+function declareScore(compScore, playScore){
+    if (compScore > playScore) {
+        let message = `Computer is winning, the score is ${compScore} - ${playScore}`;
+        console.log(message);
+    }
+    else if (compScore < playScore) {
+        let message = `You're winning! The score is ${playScore} - ${compScore}`;
+        console.log(message);
+    }
+    else {
+        let message = `It's a tie, refresh to keep playing`;
+        console.log(message);
+    }
+}
 
 game();
 
