@@ -19,19 +19,18 @@ function game(){
     declareScore(computerScore, playerScore);
     playRound(); 
     declareFinalScore(computerScore, playerScore);
-
-
 }
 
 function playRound() {
-    const computerChoice = computerPlays();
-    console.log(`Computer's choice: ${computerChoice}`);
     const playerChoice = playerPlays();
     console.log(`Player's choice: ${playerChoice}`);
+    const computerChoice = computerPlays();
+    console.log(`Computer's choice: ${computerChoice}`);
+
 
   let winner = compareRound(computerChoice, playerChoice);
   if (winner == `Tie`){
-    console.log(`It's a tie! Click refresh to try again`);
+    console.log(`It's a tie!`);
   }
   else if (winner ==`Player`) {
     console.log(`Player wins!` );
