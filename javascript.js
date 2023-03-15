@@ -1,25 +1,23 @@
-//starting over:
-
 console.log(`Welcome to Rock, Paper, Scissors Game`);
 
 
-const choices = [`rock`,`paper`,`scissors`]
+const choices = [`rock`,`paper`,`scissors`];
 
 let computerScore = 0;
 let playerScore = 0;
 
 function game(){
-    playRound(); 
-    declareScore(computerScore, playerScore);
-    playRound(); 
-    declareScore(computerScore, playerScore);
-    playRound(); 
-    declareScore(computerScore, playerScore);
-    playRound(); 
-    declareScore(computerScore, playerScore);
-    playRound(); 
+    for (let i = 0; i < 5; i++) {
+        playRound();
+        declareScore(computerScore, playerScore);
+    }
     declareFinalScore(computerScore, playerScore);
+   computerScore = computerScore * 0;
+   playerScore = playerScore * 0;
+
 }
+
+
 
 function playRound() {
     const playerChoice = playerPlays();
@@ -97,13 +95,11 @@ function declareFinalScore(compScore, playScore){
         console.log(message);
     }
     else {
-        let message = `Score is tied up at ${playScore} - ${compScore}`;
+        let message = `${playScore} - ${compScore} It's a draw. Refresh the page or enter game() in console to try again.`;
         console.log(message);
     }
 }
 
 
 game();
-
-//compareRound();
 
