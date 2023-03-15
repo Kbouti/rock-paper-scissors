@@ -10,6 +10,11 @@ let playerScore = 0;
 
 function game(){
     playRound(); 
+    playRound();
+    playRound(); 
+    playRound(); 
+    playRound(); 
+
         //get computer choice
         //get player choice
         //compare choices
