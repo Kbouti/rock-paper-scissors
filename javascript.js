@@ -10,15 +10,16 @@ let playerScore = 0;
 
 function game(){
     playRound(); 
-    playRound();
+    declareScore(computerScore, playerScore);
     playRound(); 
+    declareScore(computerScore, playerScore);
     playRound(); 
+    declareScore(computerScore, playerScore);
     playRound(); 
+    declareScore(computerScore, playerScore);
+    playRound(); 
+    declareFinalScore(computerScore, playerScore);
 
-        //get computer choice
-        //get player choice
-        //compare choices
-        //adjust score
 
 }
 
@@ -39,7 +40,8 @@ function playRound() {
   else {console.log(`You lose..`);
     computerScore = computerScore +1;
 }
-    declareScore(computerScore, playerScore);
+//declareScore(computerScore, playerScore);
+
 }
 
 function computerPlays(){
@@ -75,14 +77,32 @@ function declareScore(compScore, playScore){
         console.log(message);
     }
     else if (compScore < playScore) {
-        let message = `You're winning! The score is ${playScore} - ${compScore}`;
+        let message = `Player is winning, the score is ${playScore} - ${compScore}`;
         console.log(message);
     }
     else {
-        let message = `It's a tie, refresh to keep playing`;
+        let message = `Score is tied up at ${playScore} - ${compScore}`;
         console.log(message);
     }
 }
+
+
+
+function declareFinalScore(compScore, playScore){
+    if (compScore > playScore) {
+        let message = `The final score is  ${compScore} - ${playScore}. You're a loser`;
+        console.log(message);
+    }
+    else if (compScore < playScore) {
+        let message = `You win! The final score is ${playScore} - ${compScore}`;
+        console.log(message);
+    }
+    else {
+        let message = `Score is tied up at ${playScore} - ${compScore}`;
+        console.log(message);
+    }
+}
+
 
 game();
 
