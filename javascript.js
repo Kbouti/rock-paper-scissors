@@ -5,6 +5,9 @@ console.log(`Welcome to Rock, Paper, Scissors Game`);
 
 const choices = [`rock`,`paper`,`scissors`]
 
+let computerScore = 0;
+let playerScore = 0;
+
 function game(){
     playRound(); 
         //get computer choice
@@ -27,9 +30,8 @@ function playRound() {
     console.log(`it isn't a tie`);
    }
    let result = (`${computerChoice}, ${playerChoice}`);
-   console.log(result);
+   console.log(`The result returned by function playRound is: ` + result);
    return result;
-
 }
 
 function computerPlays(){
@@ -48,8 +50,19 @@ function playerPlays(){
 }
 
 
-playRound();
 
+function compareChoice(){
+    let turn = playRound();
+    console.log(turn);
+    if ((turn == rock,rock) || (turn == scissors,scissors) || (turn == paper,paper)){
+        return `tie`
+    }
+}
+
+
+
+
+compareChoice();
 
 
 
