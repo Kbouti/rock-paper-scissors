@@ -47,10 +47,10 @@ function computerPlays(){
 }
 
 function playerPlays(){
-    let input = prompt(`Your turn! Type rock, paper, or scissors:`);
+    let input = prompt(`Type rock, paper, or scissors:`);
     input = input.toLowerCase();
     while (choices.includes(input) == false){
-        input =prompt(`Try again and check your spelling`);
+        input =prompt(`Try again and check your spelling.`);
     }
     input = input.toLowerCase();
     return input;
@@ -95,11 +95,31 @@ function declareFinalScore(compScore, playScore){
         console.log(message);
     }
     else {
-        let message = `${playScore} - ${compScore} It's a draw. Refresh the page or enter game() in console to try again.`;
+        let message = `${playScore} - ${compScore} It's a draw. Enter game() in the console to play another match, or tieBreaker() to determine a winner`;
         console.log(message);
     }
 }
 
 
-game();
+function tieBreaker(){
+    const playerChoice = playerPlays();
+    console.log(`Player's choice: ${playerChoice}`);
+    const computerChoice = computerPlays();
+    console.log(`Computer's choice: ${computerChoice}`);
+
+
+  let winner = compareRound(computerChoice, playerChoice);
+  if (winner == `Tie`){
+    tieBreaker();
+    }
+  else if (winner ==`Player`) {
+    console.log(`Player wins!` );
+    }
+  else {console.log(`You lose..`);
+    }
+}
+
+
+
+//game();
 
