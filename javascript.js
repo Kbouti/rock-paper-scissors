@@ -1,4 +1,4 @@
-console.log(`Welcome to Rock, Paper, Scissors Game`);
+console.log(`Welcome to Rock, Paper, Scissors. Enter "game()" below to get started.`);
 
 
 const choices = [`rock`,`paper`,`scissors`];
