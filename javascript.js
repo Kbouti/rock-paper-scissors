@@ -1,7 +1,7 @@
 console.log(`Welcome to Rock, Paper, Scissors. Enter "game()" below to get started.`);
 
 
-const choices = [`rock`,`paper`,`scissors`];
+const choices = [`rock`,`paper`,`scissors`];                    
 let computerScore = 0;
 let playerScore = 0;
 
@@ -51,7 +51,12 @@ function compareRound(choiceC, choiceP) {
     if (choiceC == choiceP) {
         return `Tie`;
     }
-    else if (((choiceC == `rock`) && (choiceP == `paper`)) || ((choiceC == `paper`) && (choiceP == `scissors`)) || ((choiceC == `scissors`) && (choiceP == `rock`))){
+    else if (
+        ((choiceC == `rock`) && (choiceP == `paper`)) || 
+        ((choiceC == `paper`) && (choiceP == `scissors`)) ||
+        ((choiceC == `scissors`) && (choiceP == `rock`))
+        )
+    {
         return `Player`;
     }
     else{
