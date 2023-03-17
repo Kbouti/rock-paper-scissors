@@ -1,4 +1,6 @@
 img {width: 200px;}
 
-body {
+.wide {
+    height: 200px;
+    width: auto;
 }
