@@ -2,7 +2,6 @@ console.log(`Welcome to Rock, Paper, Scissors. Enter "game()" below to get start
 
 
 const choices = [`rock`,`paper`,`scissors`];
-
 let computerScore = 0;
 let playerScore = 0;
 
@@ -12,45 +11,37 @@ function game(){
         declareScore(computerScore, playerScore);
     }
     declareFinalScore(computerScore, playerScore);
-   computerScore = computerScore * 0;
-   playerScore = playerScore * 0;
-
+    computerScore = computerScore * 0;
+    playerScore = playerScore * 0;
 }
-
-
 
 function playRound() {
     const playerChoice = playerPlays();
     console.log(`Player's choice: ${playerChoice}`);
     const computerChoice = computerPlays();
     console.log(`Computer's choice: ${computerChoice}`);
-
-
-  let winner = compareRound(computerChoice, playerChoice);
-  if (winner == `Tie`){
-    console.log(`It's a tie!`);
-  }
-  else if (winner ==`Player`) {
-    console.log(`Player wins!` );
-    playerScore = playerScore + 1;
-  }
-  else {console.log(`You lose..`);
+    let winner = compareRound(computerChoice, playerChoice);
+    if (winner == `Tie`){
+        console.log(`It's a tie!`);
+    }
+    else if (winner ==`Player`) {
+        console.log(`Player wins!` );
+        playerScore = playerScore + 1;
+    }
+    else {console.log(`You lose..`);
     computerScore = computerScore +1;
-}
-//declareScore(computerScore, playerScore);
-
+    }
 }
 
 function computerPlays(){
     return choices[Math.floor(Math.random()*choices.length)]
-    
 }
 
 function playerPlays(){
     let input = prompt(`Type rock, paper, or scissors:`);
     input = input.toLowerCase();
     while (choices.includes(input) == false){
-        input =prompt(`Try again and check your spelling.`);
+        input = prompt(`Try again and check your spelling.`);
     }
     input = input.toLowerCase();
     return input;
@@ -83,8 +74,6 @@ function declareScore(compScore, playScore){
     }
 }
 
-
-
 function declareFinalScore(compScore, playScore){
     if (compScore > playScore) {
         let message = `The final score is  ${compScore} - ${playScore}. You're a loser`;
@@ -100,26 +89,22 @@ function declareFinalScore(compScore, playScore){
     }
 }
 
-
 function tieBreaker(){
     const playerChoice = playerPlays();
     console.log(`Player's choice: ${playerChoice}`);
     const computerChoice = computerPlays();
     console.log(`Computer's choice: ${computerChoice}`);
-
-
-  let winner = compareRound(computerChoice, playerChoice);
-  if (winner == `Tie`){
-    tieBreaker();
+    let winner = compareRound(computerChoice, playerChoice);
+    if (winner == `Tie`) {
+        tieBreaker();
     }
-  else if (winner ==`Player`) {
-    console.log(`Player wins!` );
+    else if (winner ==`Player`) {
+        console.log(`Player wins!` );
     }
-  else {console.log(`You lose..`);
+    else {
+        console.log(`You lost..`);
     }
 }
 
 
-
-//game();
 
