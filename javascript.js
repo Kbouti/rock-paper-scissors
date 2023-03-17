@@ -81,7 +81,7 @@ function declareScore(compScore, playScore){                                    
 
 function declareFinalScore(compScore, playScore){                                                             //Declares the score with a slightly different message. Offers a tiebreaker if tie. 
     if (compScore > playScore) {
-        let message = `The final score is  ${compScore} - ${playScore}. You're a loser`;
+        let message = `The final score is ${playScore} - ${compScore}. You're a loser`;
         console.log(message);
     }
     else if (compScore < playScore) {
