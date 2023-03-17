@@ -47,12 +47,12 @@ function playerPlays(){
     return input;
 }
 
-function compareRound(choiceC, choiceP) {                                   //compares choices. Tie is easy, then player wins scenarios. If it isn't a tie or a player win, the computer wins. 
+function compareRound(choiceC, choiceP) {                                   //Compares choices. Tie is easy, then player wins scenarios. If it isn't a tie or a player win, the computer wins. 
     if (choiceC == choiceP) {
         return `Tie`;
     }
     else if (
-        ((choiceC == `rock`) && (choiceP == `paper`)) || 
+        ((choiceC == `rock`) && (choiceP == `paper`)) ||                    //Situations where player wins
         ((choiceC == `paper`) && (choiceP == `scissors`)) ||
         ((choiceC == `scissors`) && (choiceP == `rock`))
         )
@@ -64,7 +64,7 @@ function compareRound(choiceC, choiceP) {                                   //co
     }
 }
 
-function declareScore(compScore, playScore){
+function declareScore(compScore, playScore){                                                    //Declares the score of for the round
     if (compScore > playScore) {
         let message = `Computer is winning, the score is ${compScore} - ${playScore}`;
         console.log(message);
@@ -79,7 +79,7 @@ function declareScore(compScore, playScore){
     }
 }
 
-function declareFinalScore(compScore, playScore){
+function declareFinalScore(compScore, playScore){                                                             //Declares the score with a slightly different message. Offers a tiebreaker if tie. 
     if (compScore > playScore) {
         let message = `The final score is  ${compScore} - ${playScore}. You're a loser`;
         console.log(message);
@@ -94,14 +94,14 @@ function declareFinalScore(compScore, playScore){
     }
 }
 
-function tieBreaker(){
+function tieBreaker(){                                              //Tiebreaker function plays a single round and does not allow the possibility of a tie. 
     const playerChoice = playerPlays();
     console.log(`Player's choice: ${playerChoice}`);
     const computerChoice = computerPlays();
     console.log(`Computer's choice: ${computerChoice}`);
     let winner = compareRound(computerChoice, playerChoice);
     if (winner == `Tie`) {
-        tieBreaker();
+        tieBreaker();                                               //If winner is tie, run the function again
     }
     else if (winner ==`Player`) {
         console.log(`Player wins!` );
