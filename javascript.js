@@ -109,6 +109,7 @@ function tieBreaker(){                                              //Tiebreaker
     else {
         console.log(`You lost..`);
     }
+    console.log(`GAME OVER.....wahhh wahhh :'(`)
 }
 
 
