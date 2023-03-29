@@ -12,3 +12,8 @@ body {
 ul {
     list-style:none;
 }
+
+.scoreBox {
+    border:solid black;
+    background-color: beige;
+}

@@ -62,25 +62,30 @@ function compareRound(choiceC, choiceP) {                                   //Co
 
 
 const rockButton =document.getElementById(`rock`)
+const paperButton =document.getElementById(`paper`)
+const scissorsButton =document.getElementById(`scissors`)
+
+
+
 rockButton.addEventListener('click', function() {
     let playerChoice = 'rock'
-    console.log(`Player picked ${playerChoice}`);
     computerChoice = computerPlays()
-    console.log(`Computer picked: ${computerChoice}`);
+    let result = compareRound(computerChoice, playerChoice);
+    console.log(`The winner is: ${result}`)
   });
 
-  const paperButton =document.getElementById(`paper`)
 paperButton.addEventListener('click', function() {
     let playerChoice = 'paper'
-    console.log(`Player picked ${playerChoice}`);
     computerChoice = computerPlays()
-    console.log(`Computer picked: ${computerChoice}`);
+    let result = compareRound(computerChoice, playerChoice);
+    console.log(`The winner is: ${result}`)
+
   });
 
-  const scissorsButton =document.getElementById(`scissors`)
   scissorsButton.addEventListener('click', function() {
     let playerChoice = 'scissors'
-    console.log(`Player picked ${playerChoice}`);
     computerChoice = computerPlays()
-    console.log(`Computer picked: ${computerChoice}`);
+    let result = compareRound(computerChoice, playerChoice);
+    console.log(`The winner is: ${result}`)
+
     });
