@@ -63,15 +63,24 @@ function compareRound(choiceC, choiceP) {                                   //Co
 
 const rockButton =document.getElementById(`rock`)
 rockButton.addEventListener('click', function() {
-    console.log('rock');
+    let playerChoice = 'rock'
+    console.log(`Player picked ${playerChoice}`);
+    computerChoice = computerPlays()
+    console.log(`Computer picked: ${computerChoice}`);
   });
 
   const paperButton =document.getElementById(`paper`)
 paperButton.addEventListener('click', function() {
-    console.log('paper');
+    let playerChoice = 'paper'
+    console.log(`Player picked ${playerChoice}`);
+    computerChoice = computerPlays()
+    console.log(`Computer picked: ${computerChoice}`);
   });
 
   const scissorsButton =document.getElementById(`scissors`)
   scissorsButton.addEventListener('click', function() {
-      console.log('scissors');
+    let playerChoice = 'scissors'
+    console.log(`Player picked ${playerChoice}`);
+    computerChoice = computerPlays()
+    console.log(`Computer picked: ${computerChoice}`);
     });
