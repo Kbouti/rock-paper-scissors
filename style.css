@@ -2,12 +2,8 @@
     margin:0px;
     padding:0px;   
 }    
-img {width: 200px;}
 
-.wide {
-    height: 200px;
-    width: auto;
-}
+
 
 body {
     background-color: rgb(114, 49, 49)
@@ -17,11 +13,7 @@ ul {
     list-style:none;
 }
 
-.scoreBox {
-    border:solid black;
-    background-color: beige;
-    padding-left:1em;
-}
+
 
 button {
     color:rgb(255, 255, 255);
@@ -38,7 +30,6 @@ ul{
     display:flex;
     flex-direction:row;
     justify-content:center;
-   
 }
 
 li {
@@ -58,6 +49,17 @@ li {
     color:rgb(21, 103, 174);
 }
 
-.scoreboard {
-    align-items: center;
+.scoreBoard {
+    border:5px solid rgb(26, 14, 97);
+    width:200px;
+    height:200px;
+}
+
+.badge {
+    font-size: 24px;
+}
+
+.scoreBoard {
+    display:flex;
+    flex-direction:column;
 }
