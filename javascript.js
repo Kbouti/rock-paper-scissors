@@ -17,49 +17,49 @@ function computerplays(){
 function playRound(playerChoice){
     let computerChoice = computerplays();
     if (playerChoice == computerChoice){
-        let  message = `It's a tie! The score is ${playerScore} - ${computerScore}`
+        let  message = `It's a tie! The score is ${playerScore} - ${computerScore}`;
         let result = `tie`;
         console.log(message);
         return result;
     }
     else if (playerChoice == `r` && computerChoice == `p`){
-        let  message = `Paper beats rock. Computer wins. The score is ${playerScore} - ${computerScore}`
         computerScore += 1;
+        let  message = `Paper beats rock. Computer wins. The score is ${playerScore} - ${computerScore}`;
         let result = `computer`;
         console.log(message);
         return result;
     }
     else if (playerChoice == `r` && computerChoice == `s`){
-        let  message = `Rock beats scissors, you win! The score is ${playerScore} - ${computerScore}`
         playerScore += 1;
+        let  message = `Rock beats scissors, you win! The score is ${playerScore} - ${computerScore}`;
         let result = `player`;
         console.log(message);
         return result;
     }
     else if (playerChoice == `p` && computerChoice == `s`){
-        let  message = `Scissors cuts paper. Computer wins. The score is ${playerScore} - ${computerScore}`
         computerScore += 1;
+        let  message = `Scissors cuts paper. Computer wins. The score is ${playerScore} - ${computerScore}`;
         let result = `computer`;
         console.log(message);
         return result;
     }
     else if (playerChoice == `s` && computerChoice == `p`){
-        let  message = `Scissors beats paper, you win! The score is ${playerScore} - ${computerScore}`
         playerScore += 1;
+        let  message = `Scissors beats paper, you win! The score is ${playerScore} - ${computerScore}`;
         let result = `player`;
         console.log(message);
         return result;
     }
     else if (playerChoice == `p` && computerChoice == `r`){
-        let  message = `rock beats paper, somputer wins. The score is ${playerScore} - ${computerScore}`
-       computerScore += 1;
+        computerScore += 1;
+        let  message = `rock beats paper, somputer wins. The score is ${playerScore} - ${computerScore}`;
         let result = `computer`;
         console.log(message);
         return result;
     }
     else if (playerChoice == `s` && computerChoice == `r`){
-        let  message = `Rock beats scissors, computer wins! The score is ${playerScore} - ${computerScore}`
         computerScore += 1;
+        let  message = `Rock beats scissors, computer wins! The score is ${playerScore} - ${computerScore}`;
         let result = `computer`;
         console.log(message);
         return result;
