@@ -1,3 +1,7 @@
+* {
+    margin:0px;
+    padding:0px;   
+}    
 img {width: 200px;}
 
 .wide {
@@ -6,7 +10,7 @@ img {width: 200px;}
 }
 
 body {
-    background-color: white
+    background-color: rgb(114, 49, 49)
 }
 
 ul {
@@ -27,14 +31,33 @@ button {
 
     width:8em;
     height:4em;
-
-
-
+    cursor:pointer;
 }
 
-Ul{
+ul{
     display:flex;
     flex-direction:row;
-    justify-content:space-around;
-    
+    justify-content:center;
+   
+}
+
+li {
+    padding:20px;
+}
+
+#title {
+    text-align: center;
+    background-color: bisque;
+    color:rgb(37, 64, 65);
+    padding:20px;
+}
+
+#action-statement {
+    text-align:center;
+    padding:12px;
+    color:rgb(21, 103, 174);
+}
+
+.scoreboard {
+    align-items: center;
 }

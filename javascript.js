@@ -98,3 +98,7 @@ paperButton.addEventListener('click', function() {
             computerScore += 1;
         }
     }
+
+
+
+    const scoreBox = document.createElement(`div`)

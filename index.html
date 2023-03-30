@@ -6,9 +6,9 @@
 
     </head>
     <body>
-        <h1>Welcome to Rock Paper Scissors</h1>
+        <h1 id="title">Welcome to Rock Paper Scissors</h1>
 
-        <h3>Make your Selection</h3>
+        <h3 id="action-statement">Make your Selection</h3>
         <ul class="choies">
             <li>
                 <button id="rock">Rock</button>
@@ -21,17 +21,11 @@
             </li>
         </ul>
     
-        <div class="scoreBox">
-            <h3>Scoreboard</h3>
-            <div class="scoreBoard">
-                <div class="pScore">
-                    <h5>Player</h5>
-                </div>
-                <div class="cScore">
-                    <h5>Computer</h5>
-                </div>
+        <div class="scoreBoard">
+            <div id="player-label" class="badge" >player</div>
+            <div id="computer-label" class="badge" >computer</div>
+            <span id="player-score">0</span>:<span id="computer-score">0</span>
 
-            </div>
         </div>
 
 
