@@ -61,20 +61,20 @@ function compareRound(choiceC, choiceP) {                                   //Co
 
 
 
-const rockButton =document.getElementById(`rock`)
-const paperButton =document.getElementById(`paper`)
-const scissorsButton =document.getElementById(`scissors`)
+const rockButton_button =document.getElementById(`rock`)
+const paperButton_button =document.getElementById(`paper`)
+const scissorsButton_button =document.getElementById(`scissors`)
 
 
 
-rockButton.addEventListener('click', function() {
+rockButton_button.addEventListener('click', function() {
     let playerChoice = 'rock'
     computerChoice = computerPlays()
     let result = compareRound(computerChoice, playerChoice);
     console.log(`The winner is: ${result}`)
   });
 
-paperButton.addEventListener('click', function() {
+paperButton_button.addEventListener('click', function() {
     let playerChoice = 'paper'
     computerChoice = computerPlays()
     let result = compareRound(computerChoice, playerChoice);
@@ -82,7 +82,7 @@ paperButton.addEventListener('click', function() {
 
   });
 
-  scissorsButton.addEventListener('click', function() {
+  scissorsButton_button.addEventListener('click', function() {
     let playerChoice = 'scissors'
     computerChoice = computerPlays()
     let result = compareRound(computerChoice, playerChoice);
@@ -99,6 +99,3 @@ paperButton.addEventListener('click', function() {
         }
     }
 
-
-
-    const scoreBox = document.createElement(`div`)
