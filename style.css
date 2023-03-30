@@ -16,4 +16,25 @@ ul {
 .scoreBox {
     border:solid black;
     background-color: beige;
+    padding-left:1em;
+}
+
+button {
+    color:rgb(255, 255, 255);
+    background-color:rgb(21, 103, 174);
+    border:none;
+    border-radius:10px;
+
+    width:8em;
+    height:4em;
+
+
+
+}
+
+Ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    
 }

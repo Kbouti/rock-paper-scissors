@@ -89,3 +89,12 @@ paperButton.addEventListener('click', function() {
     console.log(`The winner is: ${result}`)
 
     });
+
+    function score(result){
+        if (result == 'Player'){
+            playerScore += 1;
+        }
+        else if (result == 'Computer'){
+            computerScore += 1;
+        }
+    }
