@@ -67,8 +67,25 @@ function playRound(playerChoice){
 }
 
 
+function win(){
+
+}
+
+function lose(){
+    
+}
+
+
+function draw(){
+    
+}
+
+
+
 rockButton_button.addEventListener(`click`, function(){
-    playRound(`r`);
+    if (playRound(`r`) =='tie'){
+
+    }
 })
 
 paperButton_button.addEventListener(`click`, function(){
