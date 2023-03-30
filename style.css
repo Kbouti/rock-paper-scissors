@@ -6,7 +6,9 @@
 
 
 body {
-    background-color: rgb(114, 49, 49)
+    background-color: rgba(19, 8, 104, 0.226);
+    display:flex;
+    flex-direction:column;
 }
 
 ul {
@@ -38,28 +40,37 @@ li {
 
 #title {
     text-align: center;
-    background-color: bisque;
-    color:rgb(37, 64, 65);
+    background-color: rgb(241, 213, 171);
+    color:rgb(1, 84, 7);
     padding:20px;
 }
 
 #action-statement {
     text-align:center;
     padding:12px;
-    color:rgb(21, 103, 174);
+    color:rgb(179, 60, 21);
 }
 
-.scoreBoard {
-    border:5px solid rgb(26, 14, 97);
-    width:200px;
-    height:200px;
+#scoreBoard {
+    display:grid;
+    border:5px solid rgb(211, 119, 21);
+    width:150px;
+    height:100px;
+    align-self:center;
+    border-radius:10%;
+
+    grid-template-rows:1fr 3fr;
+    grid-template-columns:1fr 1fr;
 }
 
-.badge {
-    font-size: 24px;
+.score, .label{
+    align-self: center;
+    justify-self:center;
+    color:rgb(179, 60, 21);
 }
 
-.scoreBoard {
-    display:flex;
-    flex-direction:column;
+
+.score{
+    font-size:36px;
+
 }
