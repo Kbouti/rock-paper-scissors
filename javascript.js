@@ -1,3 +1,13 @@
+
+
+
+
+// Super helpful guide: https://www.youtube.com/watch?v=jaVNP3nIAv0&t=3419s
+
+
+
+
+
 let playerScore = 0
 let computerScore = 0
 
@@ -11,81 +21,55 @@ const computerScore_div =document.getElementById(`computerScore`);
 const choices = [`r`, `p`, `s`]
 
 function computerplays(){
-    return choices[Math.floor(Math.random()*choices.length)] 
+    return choices[Math.floor(Math.random()*choices.length)];
+}
+
+function win() {
+    playerScore++;
+    playerScore_div.innerHTML = playerScore;
+    console.log(`win`);
+}
+
+function lose() {
+    console.log(`lose`);
+
+}
+
+function draw() {
+    console.log(`draw`);
 }
 
 function playRound(playerChoice){
     let computerChoice = computerplays();
-    if (playerChoice == computerChoice){
-        let  message = `It's a tie! The score is ${playerScore} - ${computerScore}`;
-        let result = `tie`;
-        console.log(message);
-        return result;
-    }
-    else if (playerChoice == `r` && computerChoice == `p`){
-        computerScore += 1;
-        let  message = `Paper beats rock. Computer wins. The score is ${playerScore} - ${computerScore}`;
-        let result = `computer`;
-        console.log(message);
-        return result;
-    }
-    else if (playerChoice == `r` && computerChoice == `s`){
-        playerScore += 1;
-        let  message = `Rock beats scissors, you win! The score is ${playerScore} - ${computerScore}`;
-        let result = `player`;
-        console.log(message);
-        return result;
-    }
-    else if (playerChoice == `p` && computerChoice == `s`){
-        computerScore += 1;
-        let  message = `Scissors cuts paper. Computer wins. The score is ${playerScore} - ${computerScore}`;
-        let result = `computer`;
-        console.log(message);
-        return result;
-    }
-    else if (playerChoice == `s` && computerChoice == `p`){
-        playerScore += 1;
-        let  message = `Scissors beats paper, you win! The score is ${playerScore} - ${computerScore}`;
-        let result = `player`;
-        console.log(message);
-        return result;
-    }
-    else if (playerChoice == `p` && computerChoice == `r`){
-        computerScore += 1;
-        let  message = `rock beats paper, somputer wins. The score is ${playerScore} - ${computerScore}`;
-        let result = `computer`;
-        console.log(message);
-        return result;
-    }
-    else if (playerChoice == `s` && computerChoice == `r`){
-        computerScore += 1;
-        let  message = `Rock beats scissors, computer wins! The score is ${playerScore} - ${computerScore}`;
-        let result = `computer`;
-        console.log(message);
-        return result;
+    switch (playerChoice + computerChoice){
+        case "rs":
+        case "sp":
+        case "pr":
+            win();
+
+            break;
+
+        case "sr":
+        case "ps":
+        case "rp":
+            lose();
+            break;
+     
+        case "ss":
+        case "rr":
+        case "pp":
+            draw();
+            break;
     }
 }
 
 
-function win(){
 
-}
-
-function lose(){
-    
-}
-
-
-function draw(){
-    
-}
 
 
 
 rockButton_button.addEventListener(`click`, function(){
-    if (playRound(`r`) =='tie'){
-
-    }
+   playRound(`r`)
 })
 
 paperButton_button.addEventListener(`click`, function(){
