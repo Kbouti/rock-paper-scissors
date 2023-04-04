@@ -1,13 +1,3 @@
-
-
-
-
-// Super helpful guide: https://www.youtube.com/watch?v=jaVNP3nIAv0&t=3419s
-
-
-
-
-
 let playerScore = 0
 let computerScore = 0
 
@@ -17,6 +7,7 @@ const scissorsButton_button =document.getElementById(`scissors`);
 const actionStatement_h3 =document.getElementById(`actionStatement`);
 const playerScore_div =document.getElementById(`playerScore`);
 const computerScore_div =document.getElementById(`computerScore`);
+const scoreBoard_div = document.getElementById(`scoreBoard`);
 
 const choices = [`r`, `p`, `s`]
 
@@ -32,34 +23,14 @@ function choiceToWord(choice){
     }
 }
 
-function winMessage(playerChoice, computerChoice){
-    let message = `${choiceToWord(playerChoice)} beats ${choiceToWord(computerChoice)}. You win! `;
-    actionStatement_h3.innerHTML = message;
-}
-
-
 function computerplays(){
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
-function win() {
-    playerScore++;
-    playerScore_div.innerHTML = playerScore;
-    console.log(`win`);
+function playMatch(){
 }
-
-function lose() {
-    computerScore++;
-    computerScore_div.innerHTML = computerScore;
-    console.log(`lose`);
-
-}
-
-function draw() {
-    console.log(`draw`);
-}
-
 function playRound(playerChoice){
+
     let computerChoice = computerplays();
     switch (playerChoice + computerChoice){
         case "rs":
@@ -81,8 +52,6 @@ function playRound(playerChoice){
             playerScore++
             playerScore_div.innerHTML = playerScore;
             actionStatement_h3.innerHTML = winMessage3;
-            break;
-
             break;
 
         case "sr":
@@ -119,10 +88,9 @@ function playRound(playerChoice){
             actionStatement_h3.innerHTML = tieMessage3;
             break;
     }
+
+    checkScore();
 }
-
-
-
 
 
 
@@ -137,3 +105,21 @@ paperButton_button.addEventListener(`click`, function(){
 scissorsButton_button.addEventListener(`click`, function(){
     playRound(`s`);
 })
+
+
+function sumScore(){
+    let sum = playerScore + computerScore;
+    return sum;
+}
+
+function checkScore(){
+    if (sumScore() >= 5){
+        console.log(`game over`)
+        if (playerScore > computerScore){
+            let message = `You win!`;
+            console.log(message);
+        }
+        let message = `You lose...`;
+        console.log(message);
+    }
+}
