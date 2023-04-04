@@ -31,6 +31,8 @@ function win() {
 }
 
 function lose() {
+    computerScore++;
+    computerScore_div.innerHTML = computerScore;
     console.log(`lose`);
 
 }
