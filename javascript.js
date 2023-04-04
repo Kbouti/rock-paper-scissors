@@ -114,12 +114,27 @@ function sumScore(){
 
 function checkScore(){
     if (sumScore() >= 5){
-        console.log(`game over`)
         if (playerScore > computerScore){
             let message = `You win!`;
             console.log(message);
+            let winner = `player`
+            resetScore();
+            return winner;
         }
-        let message = `You lose...`;
-        console.log(message);
+        if (playerScore < computerScore) {
+            let message = `You lose...`;
+            console.log(message);
+            let winner = `computer`;
+            resetScore();
+            return winner;
+        }
     }
+}
+
+function resetScore(){
+    playerScore = 0;
+    computerScore = 0;
+
+    playerScore_div.innerHTML = playerScore;
+    computerScore_div.innerHTML = computerScore;
 }
