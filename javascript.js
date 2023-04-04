@@ -115,7 +115,7 @@ function sumScore(){
 function checkScore(){
     if (sumScore() >= 5){
         if (playerScore > computerScore){
-            let message = `You win! Final score is ${playerScore} - ${computerScore}`;
+            let message = `You defeated the computer! Final score is ${playerScore} - ${computerScore}.`;
             actionStatement_h3.innerHTML = message;
             console.log(message);
             let winner = `player`
@@ -124,7 +124,7 @@ function checkScore(){
             return winner;
         }
         if (playerScore < computerScore) {
-            let message = `You lose... Final score is ${playerScore} - ${computerScore}`;
+            let message = `You're a loser. Final score is ${playerScore} - ${computerScore}.`;
             actionStatement_h3.innerHTML = message;
 
             console.log(message);
