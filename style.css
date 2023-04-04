@@ -6,9 +6,9 @@
 
 
 body {
-    background-color: rgba(19, 8, 104, 0.226);
     display:flex;
     flex-direction:column;
+    background-color: rgba(6, 10, 56, 0.779);
 }
 
 ul {
@@ -18,7 +18,7 @@ ul {
 
 
 button {
-    color:rgb(255, 255, 255);
+    color:rgb(190, 205, 228);
     background-color:rgb(24, 111, 187);
     border:none;
     border-radius:10px;
@@ -44,20 +44,19 @@ li {
 
 #title {
     text-align: center;
-    background-color: rgb(241, 213, 171);
-    color:rgb(1, 84, 7);
+    color:rgb(190, 205, 228);
     padding:20px;
 }
 
 #actionStatement {
     text-align:center;
     padding:12px;
-    color:rgb(179, 60, 21);
+    color:rgb(139, 153, 175);
 }
 
 #scoreBoard {
     display:grid;
-    border:5px solid rgb(211, 119, 21);
+    border:5px solid rgb(18, 14, 79);
     width:150px;
     height:100px;
     align-self:center;
@@ -70,7 +69,7 @@ li {
 .score, .label{
     align-self: center;
     justify-self:center;
-    color:rgb(179, 60, 21);
+    color:rgb(190, 205, 228);
 }
 
 
