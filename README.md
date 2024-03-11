@@ -1,5 +1,3 @@
-# rock-paper-scissors
+Rock Paper Scissors project for Odin https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
-This is my first attempt at the Rock Paper Scissors project in Odin. The goal is to create a code that plays rock-paper-scissors on the console. 
-
-Game should ask player for their choice, compare to a random computer choice, and create a score based on that. 
+Basic game of rock paper scissors against a random computer player. Best out of 5 wins!
